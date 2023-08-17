@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: 'Oxanium', cursive;
+}
+
+
+header {
+    background-color: #F5DB13;
+    color: #212121;
+    font-size: 1.6rem;
+    padding: 1rem 10rem 1rem 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 2px 0px rgba(51, 51, 51, 0.25);
+}
+
+#img-logo {
+    width: 100%;
+}
+
+nav {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    color: #212121;
+    word-spacing: 20px;
+    height: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: #212121;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #808080;
+}
+
+h1 {
+    padding: 5rem 0rem 1rem 0rem;
+    text-align: center;
+}
+
+input   {
+    padding: 1rem 1rem 1rem 3rem;
+    border-radius: 10rem;
+    text-align: left;
+    width: 70rem;
+    background-color: #F2F2F2;
+    box-shadow: 0px 2px 2px 0px rgba(51, 51, 51, 0.25);
+    
+}
+
+.campo {
+    padding: 3rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    max-width: 1200px;
+    max-height: 1200px;
+    margin: 0 auto;
+}
+.grid div {
+    text-align: center;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    z-index: 1;
+    background-color: #F2F2F2;
+    border-radius: 8px;
+    box-shadow: 0px 2px 2px 0px rgba(51, 51, 51, 0.25);
+    width: 400px;
+    height: 200px;
+}
+
+.titulo-card{
+    color: #212121;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.numero-card {
+    color: #5c5c5c;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.titulo {
+    color: #5c5c5c;
+    display: flex;
+    padding: 22px 0px 10px 29px;
+    font-weight: bold;
+    word-spacing: 20px;
+}
+
+.circulo {
+    border-radius: 100rem;
+    border: solid 3px;
+    padding: 10px;
+    color: #212121;
+    background-color:212121;
+    width: 2rem;
+	height: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.circulo span {
+    font-size: 15px;
+}
+
+.card .circulo-item {
+    margin-left: 20px;
+}
+.card .legenda {
+    text-align: center;
+    margin: 5px 0px 10px 0px;
+}
+
+.card-btn {
+    position: absolute;
+    z-index: 1;
+}
+#btn-grass {
+    background-color: #73D677;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border-radius: 100rem;
+    box-shadow: 0px 3px 0px 0px #5EAF62;
+    color: #212121;
+    font-weight: bold;
+    margin: 0px 5px 20px 20px
+    
+}
+
+#btn-poison {
+    background-color: #07D6F2;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border-radius: 100rem;
+    box-shadow: 0px 3px 0px 0px #06b8cf;
+    color: #212121;
+    font-weight: bold;
+}
+#btn-grass:hover {
+    background-color: #5EAF62;
+}
+#btn-poison:hover {
+    background-color: #06b8cf;
+}
+
+.d-flex {
+    display: flex;
+
+}
+
+.img-pokemon {
+    width: 120px;
+    position: relative;
+    padding: 30px 50px 0px 20px;
+    z-index: 0;
+}
+
+#fade, #modal {
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fade { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+#modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #8ECCFF 0%, #C2E1FE 51.56%, #81B5FF 100%);
+    z-index: 10;
+    width: 500px;
+    max-width: 90%;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+#modal.hide,
+#fade.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+#close-modal {
+    background: transparent;
+}
+
+#close-modal #img-close {
+    height: 15px;
+    background-color: #8ECCFF;
+}
+
+#tipo {
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #ffff;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 5rem;
+}
+
