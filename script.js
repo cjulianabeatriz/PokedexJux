@@ -2,8 +2,8 @@ const pokemonName = document.querySelectorAll('.titulo-card');
 const pokemonImage = document.querySelectorAll('.img-pokemon');
 const pokemonNumber = document.querySelectorAll('.numero-card');
 const pokemonTipo = document.querySelector('.tipo');
-const pokemonAtaque = document.querySelector('.attack');
-const pokemonDefesa = document.querySelector('.defense');
+const pokemonAtaque = document.querySelectorAll('.attack');
+const pokemonDefesa = document.querySelectorAll('.defense');
 const openModalButton = document.querySelector('#btn-grass');
 const closeModalButton = document.querySelector('#close-modal');
 const modal = document.querySelector ('#modal');
@@ -39,9 +39,14 @@ const renderPokemon = async (pokemon) => {
     pokemonImage.forEach((item) => {
         item.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
     });
-    pokemonTipo.innerHTML = data['abilities']['0']['ability']['name'];
-    pokemonAtaque.innerHTML = data['stats']['1']['base_stat'];
-    pokemonDefesa.innerHTML = data['stats']['3']['base_stat'];
+    pokemonTipo.innerHTML = data['types']['0']['type']['name'];
+
+    pokemonAtaque.forEach ((item) => {
+        item.innerHTML = data['stats']['1']['base_stat'];
+    })
+    pokemonDefesa.forEach ((item) => {
+        item.innerHTML = data['stats']['3']['base_stat'];
+    })
 }
 
 form.addEventListener('submit', (event) => {

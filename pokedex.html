@@ -15,7 +15,7 @@
             <img id="img-logo" src="img/logo.png" alt="logo pokemon">
         </div>
         <nav class="link">
-            <a href="#">Homee</a>
+            <a href="#">Home</a>
             <a href="#">Pokédex</a>
             <a href="#">Legendaries</a>
             <a href="#">Documentation</a>
@@ -66,9 +66,11 @@
     <div id="fade" class="hide"></div>
 
     <div id="modal" class="hide">
-        <button id="close-modal">
-            <img id="img-close" src="img/closeIcon.svg" alt="x">
-        </button>
+        <div class="btn-modal">
+            <button id="close-modal">
+                <img id="img-close" src="img/closeIcon.svg" alt="x">
+            </button>
+        </div>
         <div class="modal-header">
             <div><img class="img-pokemon" src="#" alt="pokemon"></div>
             <div>
@@ -76,8 +78,21 @@
                 <span class="titulo-card" id="modalTitulo"></span>
                 <br>
                 <div id="tipo">
-                    <span> Tipo: </span> <br>
-                    <span class="tipo"></span>
+                    <span> <b>Type:</b> </span><span class="tipo"></span>
+                </div>
+                <div class="d-flex" id="d-flex-modal">
+                    <div class="circulo-item">
+                        <div class="circulo">
+                            <span class="attack"></span>
+                        </div>
+                        <div class="legenda">Attack</div>
+                    </div>
+                    <div class="circulo-defense">
+                        <div class="circulo">
+                            <span class="defense"><span>
+                        </div>
+                        <div class="legenda">Defense</div>
+                    </div>
                 </div>
             </div>
         </div>
